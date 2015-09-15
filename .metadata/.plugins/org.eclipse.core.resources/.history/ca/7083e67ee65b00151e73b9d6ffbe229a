@@ -19,7 +19,5 @@ public class Teste {
 		
 		v1.getVendas().add(venda1);
 		venda1.setVendedor(v1);	
-		
-		/**Teste utilizado para desenvolver o pensamento sobre o relacionamento de dois objetos*/
 	}
 }
