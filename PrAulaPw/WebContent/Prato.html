@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Prato</title>
+</head>
+<body>
+	<form action="Prato">
+		<h1>Escolha o seu prato</h1>
+	
+		Prato principal:
+		<input type="radio" name="pratoprincipal" value= "massa" checked>Massa
+		<input type="radio" name="pratoprincipal" value= "carne">Carne
+		<input type="radio" name="pratoprincipal" value= "peixe">Peixe
+		<br>
+		<br>
+		Acompanhamentos:
+		<br>
+		<input type="checkbox" name="acompanhamento" value="salada" checked>Salada
+		<br>
+		<input type="checkbox" name="acompanhamento" value="legumes" checked>Legumes
+		<br>
+		<input type="checkbox" name="acompanhamento" value="farofa" checked>Farofa
+		<br>
+		<input type="checkbox" name="acompanhamento" value="fritas" checked>Fritas
+		<br>
+		<br>
+		Convênio:
+		<select name="convenio">
+			<option value="placomp">Placomp</option>
+			<option value="abutua">Abutua</option>
+			<option value="google">Google</option>
+			<option value="prefeitura">Prefeitura</option>
+		</select>
+		<br>
+		<br>
+		Observações:
+		<br>
+		<textarea name="observacoes" rows = "4" cols = "60">
+		</textarea>
+		<br>
+		<br>
+		<input type="submit" name="enviar" value="Enviar">
+	</form>
+</body>
+</html>

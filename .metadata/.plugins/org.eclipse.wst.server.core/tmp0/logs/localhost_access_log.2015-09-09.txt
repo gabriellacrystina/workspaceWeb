@@ -1,0 +1,15 @@
+127.0.0.1 - - [09/Sep/2015:15:38:03 -0300] "GET / HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [09/Sep/2015:15:38:05 -0300] "GET /PrCadastroAluno/CadastroAluno.jsp HTTP/1.1" 200 1037
+0:0:0:0:0:0:0:1 - - [09/Sep/2015:15:38:16 -0300] "GET /PrCadastroAluno/CadastroAluno.jsp HTTP/1.1" 200 1037
+0:0:0:0:0:0:0:1 - - [09/Sep/2015:15:38:16 -0300] "GET /favicon.ico HTTP/1.1" 404 1014
+0:0:0:0:0:0:0:1 - - [09/Sep/2015:15:38:29 -0300] "POST /PrCadastroAluno/CadastroAluno HTTP/1.1" 200 1629
+0:0:0:0:0:0:0:1 - - [09/Sep/2015:15:38:46 -0300] "POST /PrCadastroAluno/CadastroAluno HTTP/1.1" 200 1900
+0:0:0:0:0:0:0:1 - - [09/Sep/2015:15:39:13 -0300] "POST /PrCadastroAluno/CadastroAluno HTTP/1.1" 200 2171
+0:0:0:0:0:0:0:1 - - [09/Sep/2015:15:39:20 -0300] "POST /PrCadastroAluno/CadastroAluno HTTP/1.1" 500 1711
+0:0:0:0:0:0:0:1 - - [09/Sep/2015:15:39:28 -0300] "POST /PrCadastroAluno/CadastroAluno HTTP/1.1" 200 1614
+0:0:0:0:0:0:0:1 - - [09/Sep/2015:15:39:32 -0300] "GET /PrCadastroAluno/CadastroAluno?ra=1 HTTP/1.1" 200 2178
+0:0:0:0:0:0:0:1 - - [09/Sep/2015:15:40:09 -0300] "GET /PrCadastroAluno/CadastroAluno?ra=2 HTTP/1.1" 200 2182
+0:0:0:0:0:0:0:1 - - [09/Sep/2015:15:40:11 -0300] "GET /PrCadastroAluno/CadastroAluno?ra=1 HTTP/1.1" 200 2178
+0:0:0:0:0:0:0:1 - - [09/Sep/2015:15:40:15 -0300] "GET /PrCadastroAluno/CadastroAluno?ra=3 HTTP/1.1" 200 2182
+0:0:0:0:0:0:0:1 - - [09/Sep/2015:15:40:43 -0300] "GET /PrCadastroAluno/CadastroAluno?ra=2 HTTP/1.1" 200 2182
+0:0:0:0:0:0:0:1 - - [09/Sep/2015:15:40:49 -0300] "POST /PrCadastroAluno/CadastroAluno HTTP/1.1" 200 2168

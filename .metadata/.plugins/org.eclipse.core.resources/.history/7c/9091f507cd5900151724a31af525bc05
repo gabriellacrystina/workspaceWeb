@@ -1,0 +1,100 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="PrAula.Aluno"%>    
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Cadastro</title>
+	</head>
+		<body>
+			<form action = "Cadastro" method = "post">
+				<h2>Cadastro de Aluno</h2>
+				RA <input type="text" name="ra"><br><br>
+				Nome <input type="text" name="nome"><br><br>
+				Idade <input type="text" name="idade"><br><br>
+				Curso <input type="text" name="curso"><br><br>
+				Ano de Conclusão <input type="text" name="ac"><br><br>
+				
+				<input type="submit" name="btnSubmit" value="salvar">
+				<input type="submit" name="btnSubmit" value="pesquisar">
+				<input type="submit" name="btnSubmit" value="editar">
+				<input type="submit" name="btnSubmit" value="excluir">
+				
+				
+			</form>
+			<%
+			ArrayList<Aluno> listaAluno = (ArrayList<Aluno>) session.getAttribute("listaAluno");
+			
+			if (listaAluno != null) {
+				%> 
+				<table border="1" style="width:40%">
+						<thead>
+							<tr>
+								<th>RA</th>
+								<th>NOME</th>
+								<th>IDADE</th>
+								<th>CURSO</th>
+								<th>ANO DE CONCLUSAO</th>
+								<th>AÇÕES</th>
+							</tr>
+						</thead>
+				<%	
+				
+				//Resultado da pesquisa
+				//Erro aqui pra receber esse inteiro!!
+				int aux = (int) request.getAttribute("n");
+				String erro = (String) request.getAttribute("erro");
+			
+				if (aux >= 0){
+					Aluno a = listaAluno.get(aux);
+					%>			
+						<tr>
+							<td><%=a.getRA() %></td>
+							<td><%=a.getNome() %></td>
+							<td><%=a.getIdade() %></td>
+							<td><%=a.getCurso()  %></td>
+							<td><%=a.getAnoConclusao() %></td>
+							<td>
+								<a href="CadastroAluno?ra=<%=a.getRA() %>">Editar</a>
+							</td>
+							<td>
+								<a href="CadastroAluno?ra=<%=a.getRA() %>">Excluir</a>
+							</td>
+						</tr>
+					<%
+				} else if (erro != null && !erro.equals("")) {
+					%>			
+						<tr>
+							<td colspan="6" style="text-align: center;"><%=erro%></td>
+						</tr>
+					<%
+				}
+				//Conteudo da lista
+				for(Aluno aluno: listaAluno){
+					%>			
+						<tr>
+							<td><%=aluno.getRA() %></td>
+							<td><%=aluno.getNome() %></td>
+							<td><%=aluno.getIdade() %></td>
+							<td><%=aluno.getCurso()  %></td>
+							<td><%=aluno.getAnoConclusao() %></td>
+							<td>
+								<a href="Cadastro?ra=<%=aluno.getRA() %>">Editar</a>
+								<a href="Cadastro?ra=<%=aluno.getRA() %>">Excluir</a>
+							</td>
+						</tr>
+					<%
+				}
+			}else{
+			%>
+					alert("Lista Vazia!!");
+			<%
+			}
+			%>
+				</table>
+		</body>
+</html>

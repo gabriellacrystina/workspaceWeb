@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1440253853817_1" label="TESTE" name="TESTE">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/HelloWorld" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1439848980304_0" label="Window Working Set" name="Aggregate for window 1439848980304"/>
+<mruList name="TESTE"/>
+</workingSetManager>

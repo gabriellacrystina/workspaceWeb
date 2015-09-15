@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Menu</title>
+</head>
+<body>
+	<a href="http://localhost:8080/PrAulaPw/Calculadora.html">Calculadora</a>
+	<a href="http://localhost:8080/PrAulaPw/dados.html">Dados</a>
+	<a href="http://localhost:8080/PrAulaPw/Prato.html">Prato</a>
+</body>
+</html>

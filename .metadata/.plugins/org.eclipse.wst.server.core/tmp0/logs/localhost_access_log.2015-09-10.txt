@@ -1,0 +1,8 @@
+127.0.0.1 - - [10/Sep/2015:09:29:27 -0300] "GET / HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [10/Sep/2015:09:29:29 -0300] "GET /PrCadastroAluno/CadastroAluno.jsp HTTP/1.1" 200 1038
+0:0:0:0:0:0:0:1 - - [10/Sep/2015:09:29:37 -0300] "GET /PrCadastroAluno/CadastroAluno.jsp HTTP/1.1" 200 1038
+0:0:0:0:0:0:0:1 - - [10/Sep/2015:09:30:06 -0300] "GET /PrCadastroAluno/CadastroAluno.jsp HTTP/1.1" 200 1037
+0:0:0:0:0:0:0:1 - - [10/Sep/2015:09:30:18 -0300] "POST /PrCadastroAluno/CadastroAluno HTTP/1.1" 200 1629
+0:0:0:0:0:0:0:1 - - [10/Sep/2015:09:30:33 -0300] "POST /PrCadastroAluno/CadastroAluno HTTP/1.1" 200 1904
+0:0:0:0:0:0:0:1 - - [10/Sep/2015:09:31:25 -0300] "POST /PrCadastroAluno/CadastroAluno HTTP/1.1" 200 2455
+0:0:0:0:0:0:0:1 - - [10/Sep/2015:09:36:58 -0300] "POST /PrCadastroAluno/CadastroAluno HTTP/1.1" 200 1794
