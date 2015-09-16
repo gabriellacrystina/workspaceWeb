@@ -74,6 +74,30 @@ public class ManutencaoVendedor extends HttpServlet {
 			listaVendedor.add(vendedor);
 		}
 		
+		
+		if(btn.equals("pesquisar")){
+			String erro = "";
+			int i,cod = 0;
+			Vendedor vend = null;
+			
+			//recebo o RA como parametro de busca.
+			cod =(Integer.parseInt(request.getParameter("codigo")));
+			
+			for(i = 0; i < listaVendedor.size(); i++){
+				Vendedor v = (Vendedor) listaVendedor.get(i);
+				if(cod == v.getCodigo()){
+					vend = v;
+				}
+			}
+				if(vend == null)
+					erro = ("VENDEDOR NÃO ENCONTRADO!!");
+				
+			//Se houver erro, então set a string de erro ou então "".
+			request.setAttribute("erro", erro);
+			//Se o vendedor foi encontrado set 
+			request.setAttribute("vendedor", vend);
+		}
+		
 		//requisição atual é transferida para a página JSP ManutencaoVendedor.
 		request.getRequestDispatcher("ManutencaoVendedor.jsp").forward(request, response);	
 	}

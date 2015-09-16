@@ -10,9 +10,9 @@
 	</head>
 	<body>
 		<form action="ManutencaoVendedor" method="post">
-		
+			
 			<h1>Manutenção de Vendedor</h1>
-				Codigo: <input type="text" name="codigo"><br><br>
+				Codigo: <input type="text" name="codigo" ><br><br>
 				Nome: <input type="text" name="nome"><br><br>
 			
 			<input type="submit" name="btnSubmit" value="salvar">
@@ -27,7 +27,7 @@
 		<%
 			ArrayList<Vendedor> listaVendedor = (ArrayList<Vendedor>) session.getAttribute("listaVendedor");
 		
-			if(listaVendedor != null){
+			if(listaVendedor != null && listaVendedor.size() > 0){
 			%>	<!--Definindo a tabela que apresenta o resultado-->
 				<table border="1" style="width:20%">
 				<thead>
@@ -36,16 +36,34 @@
 						<th>NOME DO VENDEDOR</th>
 					</tr>
 				</thead>
-				<%	
-				
-				for(Vendedor vendedor : listaVendedor){
-				%>	
-					<tr>
-						<td><center><%=vendedor.getCodigo() %></center></td>
-						<td><center><%=vendedor.getNome() %></center></td>
-					</tr>
-				<%	
-				}
+				<%
+					//Pesquisa : objeto da pesquisa ou string de erro. 
+					Vendedor pesquisar = (Vendedor) request.getAttribute("vendedor");
+					String erro = (String) request.getAttribute("erro");
+					
+					if(pesquisar != null){
+					%>			
+						<tr>
+							<td><%=pesquisar.getCodigo() %></td>
+							<td><%=pesquisar.getNome() %></td>
+						</tr>
+					<%
+					}else if(erro != null && !erro.equals("")){
+						%>
+						<tr>
+							<td colspan="3" style="text-align: center;"><%=erro%></td>
+						</tr>
+						<%	
+						}else{//Apresenta o conteudo da Lista
+							for(Vendedor vendedor : listaVendedor){
+							%>
+								<tr>
+									<td><center><%=vendedor.getCodigo() %></center></td>
+									<td><center><%=vendedor.getNome() %></center></td>
+								</tr>
+							<%	
+							}	
+						}	
 			}
 			%>
 		
