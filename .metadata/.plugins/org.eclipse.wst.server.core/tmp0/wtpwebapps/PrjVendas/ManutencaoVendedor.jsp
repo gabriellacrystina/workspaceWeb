@@ -17,7 +17,7 @@
 			
 			if(erro != null){
 				%>
-					<div> <%=erro %></div>
+					<br><br><div><%=erro %></div><br><br>
 				<%
 			}
 		%>
@@ -55,7 +55,6 @@
 						<td><center><%=vendedor.getNome() %></center></td>
 					</tr>
 				<%	
-					
 				}	
 			}
 			%>
