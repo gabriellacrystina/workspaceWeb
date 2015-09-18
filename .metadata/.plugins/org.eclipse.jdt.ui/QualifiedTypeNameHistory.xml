@@ -8,6 +8,6 @@
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="PrAula.Aluno"/>
 <fullyQualifiedTypeName name="Modelo.Regiao"/>
-<fullyQualifiedTypeName name="Modelo.Vendedor"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="Modelo.Vendedor"/>
 </qualifiedTypeNameHistroy>

@@ -76,7 +76,7 @@ public class ManutencaoVendedor extends HttpServlet {
 		
 		
 		if(btn.equals("pesquisar")){
-			String erro = null;
+			String erro = "";
 			int i,cod = 0;
 			Vendedor vend = null;
 			

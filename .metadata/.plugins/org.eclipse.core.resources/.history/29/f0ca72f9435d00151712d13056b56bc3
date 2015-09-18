@@ -64,7 +64,7 @@ public class ManutencaoVendedor extends HttpServlet {
 			
 			//Gerar código automático - O arrayList já soma 1 posicao assim que adiciona um item
 			//Por isso não eh necessario nenhum tratamento especifico.
-			codigo = listaVendedor.size() + 1;
+			codigo = listaVendedor.size();
 			vendedor.setCodigo(codigo);
 			
 			auxiliar = request.getParameter("nome");
@@ -76,7 +76,7 @@ public class ManutencaoVendedor extends HttpServlet {
 		
 		
 		if(btn.equals("pesquisar")){
-			String erro = null;
+			String erro = "";
 			int i,cod = 0;
 			Vendedor vend = null;
 			

@@ -91,3 +91,16 @@
 0:0:0:0:0:0:0:1 - - [15/Sep/2015:23:44:16 -0300] "POST /PrjVendas/ManutencaoVendedor HTTP/1.1" 200 1409
 0:0:0:0:0:0:0:1 - - [15/Sep/2015:23:44:21 -0300] "POST /PrjVendas/ManutencaoVendedor HTTP/1.1" 200 1132
 0:0:0:0:0:0:0:1 - - [15/Sep/2015:23:44:25 -0300] "POST /PrjVendas/ManutencaoVendedor HTTP/1.1" 200 1172
+127.0.0.1 - - [15/Sep/2015:23:50:23 -0300] "GET / HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [15/Sep/2015:23:50:32 -0300] "GET /PrjVendas/Menu.jsp HTTP/1.1" 200 630
+0:0:0:0:0:0:0:1 - - [15/Sep/2015:23:50:35 -0300] "GET /PrjVendas/ManutencaoVendedor.jsp HTTP/1.1" 500 3088
+127.0.0.1 - - [15/Sep/2015:23:51:15 -0300] "GET / HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [15/Sep/2015:23:51:21 -0300] "GET /PrjVendas/ManutencaoVendedor.jsp HTTP/1.1" 200 850
+0:0:0:0:0:0:0:1 - - [15/Sep/2015:23:51:26 -0300] "POST /PrjVendas/ManutencaoVendedor HTTP/1.1" 200 1174
+0:0:0:0:0:0:0:1 - - [15/Sep/2015:23:51:28 -0300] "POST /PrjVendas/ManutencaoVendedor HTTP/1.1" 200 1291
+0:0:0:0:0:0:0:1 - - [15/Sep/2015:23:51:31 -0300] "POST /PrjVendas/ManutencaoVendedor HTTP/1.1" 200 1408
+0:0:0:0:0:0:0:1 - - [15/Sep/2015:23:51:35 -0300] "POST /PrjVendas/ManutencaoVendedor HTTP/1.1" 200 1526
+0:0:0:0:0:0:0:1 - - [15/Sep/2015:23:51:43 -0300] "POST /PrjVendas/ManutencaoVendedor HTTP/1.1" 200 1133
+0:0:0:0:0:0:0:1 - - [15/Sep/2015:23:51:50 -0300] "POST /PrjVendas/ManutencaoVendedor HTTP/1.1" 200 1133
+0:0:0:0:0:0:0:1 - - [15/Sep/2015:23:51:54 -0300] "POST /PrjVendas/ManutencaoVendedor HTTP/1.1" 200 1172
+0:0:0:0:0:0:0:1 - - [15/Sep/2015:23:52:06 -0300] "POST /PrjVendas/ManutencaoVendedor HTTP/1.1" 200 1646
