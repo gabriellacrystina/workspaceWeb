@@ -100,8 +100,7 @@ public class ManutencaoVendedor extends HttpServlet {
 		if(btn.equals("alterar")){
 			
 			int cod = Integer.parseInt(request.getParameter("codigo"));
-			vendedor = listaVendedor.get(cod);
-			
+			vendedor = listaVendedor.get(cod-1);
 			
 			auxiliar = request.getParameter("nome");
 			vendedor.setNome(auxiliar);
