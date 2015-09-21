@@ -112,7 +112,7 @@ public class ManutencaoVendedor extends HttpServlet {
 			
 			listaVendedor.remove(vendedor);
 		}
-	
+		
 		//requisição atual é transferida para a página JSP ManutencaoVendedor.
 		request.getRequestDispatcher("ManutencaoVendedor.jsp").forward(request, response);	
 	}

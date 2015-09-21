@@ -1,11 +1,18 @@
 package Servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import Modelo.Regiao;
+import Modelo.Venda;
+import Modelo.Vendedor;
 
 /**
  * Servlet implementation class CadastroVendas
@@ -33,7 +40,47 @@ public class CadastroVendas extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
+		HttpSession sessao = request.getSession();
+		
+		Venda venda = new Venda();
+		ArrayList<Venda> listaVendas;
+		ArrayList<Vendedor> listaVendedor;
+		
+		listaVendas = (ArrayList<Venda>)sessao.getAttribute("listaVendas");
+		listaVendedor = (ArrayList<Vendedor>)sessao.getAttribute("listaVendedor");
+		
+		
+		if(listaVendas == null){
+			listaVendas = new ArrayList<Venda>();
+			sessao.setAttribute("listaVendas", listaVendas);
+		}
+	
+		Vendedor vendedor;
+		int numero=0, indice;
+		double valor;
+		String regiao;
+		
+		//numero da venda
+		numero = listaVendas.size()+1;
+		venda.setNumeroVenda(numero);
+		
+		//vendedor da venda
+		indice = Integer.parseInt(request.getParameter("vendedor"));
+		vendedor = listaVendedor.get(indice);
+		venda.setVendedor(vendedor);
+		
+		//valor da venda
+		valor = Double.parseDouble(request.getParameter("valor"));
+		venda.setValorVenda(valor);
+		
+		//regiao da venda
+		regiao = request.getParameter("regiao");
+		venda.setRegiao(Regiao.valueOf(regiao));
+		
+		listaVendas.add(venda);
+		vendedor.addVendas(venda);
+		
+		request.getRequestDispatcher("CadastroVendas.jsp").forward(request, response);	
 	}
-
 }

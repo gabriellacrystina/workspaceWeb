@@ -27,4 +27,9 @@ public class Vendedor {
 	public void setVendas(ArrayList<Venda> vendas) {
 		this.vendas = vendas;
 	}
+	
+	public void addVendas(Venda venda){
+		vendas.add(venda);
+		venda.setVendedor(this);
+	}
 }
