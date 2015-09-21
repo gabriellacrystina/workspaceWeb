@@ -12,8 +12,8 @@
 			<h1>Manutenção de Vendedor</h1>
 		<%
 			//Pesquisa : objeto da pesquisa ou string de erro. 
-			Vendedor pesquisar = (Vendedor) request.getAttribute("vendedor");
-			String erro = (String) request.getAttribute("erro");	
+			Vendedor pesquisar = (Vendedor) session.getAttribute("vendedor");
+			String erro = (String) session.getAttribute("erro");	
 			
 			if(erro != null){
 				%>
@@ -32,9 +32,7 @@
 			<input type="submit" name="btnSubmit" value="excluir"><br><br>
 				
 		</form>
-		
 		<!--Fim o formulario-->
-		
 		<%
 			ArrayList<Vendedor> listaVendedor = (ArrayList<Vendedor>) session.getAttribute("listaVendedor");
 		
@@ -58,7 +56,6 @@
 				}	
 			}
 			%>
-		
 			</table>
 		<br><br><a href="Menu.jsp">VOLTAR</a><br>
 	</body>

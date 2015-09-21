@@ -72,8 +72,7 @@ public class ManutencaoVendedor extends HttpServlet {
 			//adiciona o objeto vendedor na lista.
 			listaVendedor.add(vendedor);
 		}
-		
-		
+	
 		if(btn.equals("pesquisar")){
 			String erro = null;
 			int i,cod = 0;
@@ -92,22 +91,28 @@ public class ManutencaoVendedor extends HttpServlet {
 					erro = ("VENDEDOR NÃO ENCONTRADO!!");
 				
 			//Se houver erro, então set a string de erro ou então "".
-			request.setAttribute("erro", erro);
+			sessao.setAttribute("erro", erro);
 			//Se o vendedor foi encontrado set 
-			request.setAttribute("vendedor", vend);
+			sessao.setAttribute("vendedor", vend);
 		}
 		
 		if(btn.equals("alterar")){
 			
-			int cod = Integer.parseInt(request.getParameter("codigo"));
-			vendedor = listaVendedor.get(cod-1);
+			vendedor = (Vendedor) sessao.getAttribute("vendedor");
 			
 			auxiliar = request.getParameter("nome");
 			vendedor.setNome(auxiliar);
 			
-			request.setAttribute("alterar", vendedor);
+			sessao.setAttribute("alterar", vendedor);
 		}
-		
+	
+		if(btn.equals("excluir")){
+			
+			vendedor = (Vendedor) sessao.getAttribute("vendedor");
+			
+			listaVendedor.remove(vendedor);
+		}
+	
 		//requisição atual é transferida para a página JSP ManutencaoVendedor.
 		request.getRequestDispatcher("ManutencaoVendedor.jsp").forward(request, response);	
 	}
