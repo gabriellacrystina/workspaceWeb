@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ page import="Modelo.Venda" %>   
+<%@ page import="Modelo.Regiao" %>
+<%@ page import="java.util.ArrayList" %>  
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Relatorio por Regiao</title>
+	</head>
+	<body>
+		<form action="RelatorioVendasRegiao" method="post">
+		<h1>Relatório de Vendas por Regiao</h1><br>
+
+		Regiao:
+		<select name="regiao">
+			<%
+				for(Regiao regiao: Regiao.values()){
+				%>	
+					<option value = "<%=regiao.name()%>"><%=regiao.name()%></option>
+				<%	
+				}
+			%>
+		</select><br><br>
+		<input type="submit" name="btnSubmit" value="Gerar Relatório"><br><br><br>
+		</form>
+		<!--Fim o formulario-->
+		
+		<%
+			ArrayList<Venda> relatorio = (ArrayList<Venda>) session.getAttribute("relatorio");	
+		%>
+		
+		<table border="1" style="width:30%">
+			<thead>
+				<tr>
+					<th>NUMERO</th>
+					<th>VENDEDOR</th>
+					<th>VALOR</th>
+				</tr>
+			</thead>
+		
+		
+		
+		
+		<a href="Menu.jsp">VOLTAR</a><br>
+	</body>
+</html>
