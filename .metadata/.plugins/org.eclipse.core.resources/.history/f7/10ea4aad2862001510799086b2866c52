@@ -59,8 +59,8 @@
 				}
 			%>
 		</table><br>
-		<div>
-			QUANTIDADE DE VENDAS: <%=qtde%><br>
+		<div style="color:#0000FF">
+			<h3>QUANTIDADE DE VENDAS:</h3><%=qtde%><br>
 			TOTAL: <%=total%>
 		</div><br><br>
 		<a href="Menu.jsp">VOLTAR</a><br>

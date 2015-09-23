@@ -58,11 +58,11 @@
 					}
 				}
 			%>
-		</table><br>
+		</table><br><br>
 		<div>
-			QUANTIDADE DE VENDAS: <%=qtde%><br>
+			QUANTIDADE DE VENDAS: <%=qtde%>
 			TOTAL: <%=total%>
-		</div><br><br>
+		</div>
 		<a href="Menu.jsp">VOLTAR</a><br>
 	</body>
 </html>

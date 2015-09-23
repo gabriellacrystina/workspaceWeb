@@ -57,20 +57,20 @@ public class RelatorioVendasRegiao extends HttpServlet {
 		Venda venda;
 		String regiao = request.getParameter("regiao");
 		
-		//int i, qtde = 0;
-		//double valTotal = 0;
+		int i, qtde = 0;
+		double valTotal = 0;
 		
-		for(int i=0; i < listaVendas.size(); i++){
+		for(i=0; i < listaVendas.size(); i++){
 			venda = listaVendas.get(i);
 			if(venda.getRegiao().equals(Regiao.valueOf(regiao))){
-				//valTotal += venda.getValorVenda();
-				//qtde++;
+				valTotal += venda.getValorVenda();
+				qtde++;
 				relatorio.add(venda);
 			}
 		}
 		sessao.setAttribute("relatorio", relatorio);
-		//request.setAttribute("quantidade", qtde);
-		//request.setAttribute("valorTotal", valTotal);
+		request.setAttribute("quantidade", qtde);
+		request.setAttribute("valorTotal", valTotal);
 		
 		request.getRequestDispatcher("RelatorioVendasRegiao.jsp").forward(request, response);	
 	}

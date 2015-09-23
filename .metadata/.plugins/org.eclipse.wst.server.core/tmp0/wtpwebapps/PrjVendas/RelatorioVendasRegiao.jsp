@@ -28,8 +28,8 @@
 		<!--Fim o formulario-->
 		<%
 			ArrayList<Venda> relatorio = (ArrayList<Venda>) session.getAttribute("relatorio");
-			//int qtde = Integer.parseInt(request.getParameter("quantidade"));
-			//double valVendas = Double.parseDouble(request.getParameter("valorTotal"));
+			int qtde = 0;
+			double total = 0;
 		%>
 		
 		<table border="1" style="width:30%">
@@ -50,12 +50,19 @@
 							<td><center><%= vendas.getVendedor().getNome() %></center></td>
 							<td><center><%= vendas.getValorVenda() %></center></td>
 							<td><center><%= vendas.getRegiao() %></center></td>
+							<% qtde++;
+							   total += vendas.getValorVenda(); 
+							%>
 						</tr>
 					<%	
 					}
 				}
 			%>
-		</table><br><br>
+		</table><br>
+		<div>
+			QUANTIDADE DE VENDAS: <%=qtde%><br>
+			TOTAL: <%=total%>
+		</div><br><br>
 		<a href="Menu.jsp">VOLTAR</a><br>
 	</body>
 </html>

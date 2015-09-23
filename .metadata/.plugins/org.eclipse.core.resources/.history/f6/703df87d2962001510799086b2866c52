@@ -39,6 +39,8 @@
 					<th>VENDEDOR</th>
 					<th>VALOR</th>
 					<th>REGIAO</th>
+					<th>Quantidade</th>
+					<th>Total</th>
 				</tr>
 			</thead>
 			<%

@@ -32,13 +32,15 @@
 			double total = 0;
 		%>
 		
-		<table border="1" style="width:30%">
+		<table border="1" style="width:40%">
 			<thead>
 				<tr>
 					<th>NUMERO</th>
 					<th>VENDEDOR</th>
 					<th>VALOR</th>
 					<th>REGIAO</th>
+					<th>Quantidade</th>
+					<th>Total</th>
 				</tr>
 			</thead>
 			<%
@@ -53,12 +55,16 @@
 							<% qtde++;
 							   total += vendas.getValorVenda(); 
 							%>
-						</tr>
+						
 					<%	
 					}
 				}
 			%>
+		<td><%=qtde%></td>
+		<td><%=total%></td>
+		</tr>
 		</table><br>
+		
 		<div>
 			QUANTIDADE DE VENDAS: <%=qtde%><br>
 			TOTAL: <%=total%>

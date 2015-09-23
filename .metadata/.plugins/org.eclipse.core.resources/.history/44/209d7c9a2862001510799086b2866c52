@@ -59,7 +59,7 @@
 				}
 			%>
 		</table><br>
-		<div>
+		<div style="color:#0000FF">
 			QUANTIDADE DE VENDAS: <%=qtde%><br>
 			TOTAL: <%=total%>
 		</div><br><br>
