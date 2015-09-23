@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import Modelo.Venda;
 import Modelo.Vendedor;
 
 /**
@@ -40,8 +39,11 @@ public class RelatorioVendasRegiao extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession sessao = request.getSession();
-		
+		ArrayList<Vendedor> listaVendedor;
 		ArrayList<Venda> listaVendas;
+		
+		listaVendedor = (ArrayList<Vendedor>)sessao.getAttribute("listaVendedor");
 		listaVendas = (ArrayList<Venda>)sessao.getAttribute("listaVendas");
 	}
+
 }

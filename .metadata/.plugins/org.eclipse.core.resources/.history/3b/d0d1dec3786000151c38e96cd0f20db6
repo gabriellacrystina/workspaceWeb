@@ -39,9 +39,7 @@ public class RelatorioVendasRegiao extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession sessao = request.getSession();
 		
-		ArrayList<Venda> listaVendas;
-		listaVendas = (ArrayList<Venda>)sessao.getAttribute("listaVendas");
 	}
+
 }

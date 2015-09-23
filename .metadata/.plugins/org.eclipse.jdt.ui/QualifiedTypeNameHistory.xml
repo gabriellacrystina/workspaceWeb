@@ -7,7 +7,9 @@
 <fullyQualifiedTypeName name="com.sun.xml.internal.bind.v2.schemagen.xmlschema.List"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="PrAula.Aluno"/>
-<fullyQualifiedTypeName name="Modelo.Regiao"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="Modelo.Vendedor"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="Modelo.Regiao"/>
+<fullyQualifiedTypeName name="Modelo.Venda"/>
 </qualifiedTypeNameHistroy>

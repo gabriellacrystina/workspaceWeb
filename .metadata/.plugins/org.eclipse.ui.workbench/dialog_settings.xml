@@ -14,6 +14,8 @@
 		<list key="textEntries">
 		</list>
 	</section>
+	<section name="ZipFileImportWizard">
+	</section>
 	<section name="ZipFileExportWizard">
 		<item value="true" key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID"/>
 		<item value="true" key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID"/>
@@ -24,8 +26,6 @@
 			<item value="C:\Users\Jean Bruno\Desktop\4º Semestre\PWeb\PrCadastroAlunoD.zip"/>
 			<item value="C:\Users\Jean Bruno\Desktop\4º Semestre\PWeb\PrCadastroAluno.zip"/>
 		</list>
-	</section>
-	<section name="ZipFileImportWizard">
 	</section>
 	<section name="ImportExportAction">
 		<item value="org.eclipse.ui.wizards.export.ZipFile" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>

@@ -44,4 +44,5 @@ public class RelatorioVendasRegiao extends HttpServlet {
 		ArrayList<Venda> listaVendas;
 		listaVendas = (ArrayList<Venda>)sessao.getAttribute("listaVendas");
 	}
+
 }
