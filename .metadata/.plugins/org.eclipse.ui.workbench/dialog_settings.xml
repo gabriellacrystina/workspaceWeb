@@ -3,8 +3,8 @@
 	<section name="FileSystemImportWizard">
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="1200" key="dialogWidth"/>
-		<item value="624" key="dialogHeight"/>
+		<item value="1440" key="dialogWidth"/>
+		<item value="759" key="dialogHeight"/>
 		<list key="orderedProviders">
 		</list>
 		<list key="textArray">
@@ -13,8 +13,6 @@
 		</list>
 		<list key="textEntries">
 		</list>
-	</section>
-	<section name="ZipFileImportWizard">
 	</section>
 	<section name="ZipFileExportWizard">
 		<item value="true" key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID"/>
@@ -26,6 +24,8 @@
 			<item value="C:\Users\Jean Bruno\Desktop\4º Semestre\PWeb\PrCadastroAlunoD.zip"/>
 			<item value="C:\Users\Jean Bruno\Desktop\4º Semestre\PWeb\PrCadastroAluno.zip"/>
 		</list>
+	</section>
+	<section name="ZipFileImportWizard">
 	</section>
 	<section name="ImportExportAction">
 		<item value="org.eclipse.ui.wizards.export.ZipFile" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>
